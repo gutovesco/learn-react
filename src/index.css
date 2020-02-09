@@ -1,13 +1,70 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:200,400&display=swap');
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  min-height: 920px;
+  width: 500px;
+  margin: 40px auto;
+  padding: 0;
+  box-sizing: border-box;
+  background-image: linear-gradient(-225deg, #3D4E81 0%, #5753C9 48%, #6E7FF3 100%);
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: 'Raleway', sans-serif;
 }
+
+.inpt{
+  background-image: linear-gradient(-225deg, #FFFEFF 0%, #D7FFFE 100%);  
+  border: 0;
+  width: 200px;
+  height: 40px;
+  padding: 0 20px;
+  margin-top: 30px;
+  margin-right: 10px;
+  font-size: 18px;
+  border-radius: 6px;
+  color: black;
+  font-family: 'Raleway', sans-serif;
+  padding-right: 20px;
+  outline: none;
+  margin-bottom: 15px;
+}
+.add-btn{
+  position: relative;
+  height: 37px;
+  width: 80px;
+  border-radius: 5px;
+  border: 0;
+  background-image: linear-gradient(-225deg, #FFFEFF 0%, #D7FFFE 100%);  
+  font-weight: bolder;
+  font-family: 'Raleway', sans-serif;
+  margin-right: 10px;
+}
+.add-btn:focus{
+  background-image: linear-gradient(-225deg, #FFFEFF 100%, #D7FFFE 100%);  
+}
+.add-btn:hover{
+  background-image: linear-gradient(-225deg, #FFFEFF 100%, #D7FFFE 100%);  
+  cursor: pointer;
+}
+.remove-btn{
+  position: relative;
+  height: 37px;
+  width: 80px;
+  border-radius: 5px;
+  border: 0;
+  background-image: linear-gradient(-225deg, #FFFEFF 0%, #D7FFFE 100%);  
+  font-weight: bolder;
+  font-family: 'Raleway', sans-serif;
+}
+.remove-btn:hover{
+  background-image: linear-gradient(-225deg, #FFFEFF 100%, #D7FFFE 100%);  
+  cursor: pointer;
+}
+.count{
+  color: #FFFEFF;
+  margin-top: 10px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px;
+}
+

@@ -19,6 +19,17 @@ function App() {
     localStorage.setItem(LOCAL_STORAGE_ID, JSON.stringify(todos))
   }, [todos])
 
+  function toggleTodo(id){
+    const newTodos = [...todos]
+    const todo = newTodos.find(todo => todo.id === id)
+    todo.complete = !todo.complete
+    setTodos(newTodos)
+  }
+  function handleClearTodos(){
+    const newTodos = todos.filter(todo => !todo.complete)
+    setTodos(newTodos)
+  }
+
 
   function handleAddTodo(e){
     const name = todoNameRef.current.value
@@ -30,11 +41,12 @@ function App() {
   }
   return (
     <main>
-      <TodoList todos={todos}/>
-      <input placeholder="text" ref={todoNameRef}></input>
-      <button onClick={handleAddTodo}>Adicionar</button>
-      <button>Limpar</button>
-      <div>0 restantes</div>
+      
+      <input className="inpt" placeholder="text" ref={todoNameRef}></input>
+      <button className="add-btn" onClick={handleAddTodo}>Adicionar</button>
+      <button className="remove-btn" onClick={handleClearTodos}>Limpar</button>
+      <TodoList className="todo-list" todos={todos} toggleTodo={toggleTodo}/>
+      <div className="count">{todos.filter(todo => !todo.complete).length} restantes</div>
     </main>
   );
 }
